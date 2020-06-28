@@ -1,12 +1,12 @@
 import React from 'react'
 import './Form.css'
 
-const Form = ({value, color, onChange, onSubmit, onKeyPress}) => {
+const Form = ({value, color, onChange, onSubmit}) => {
     return (
         <form className="form" onSubmit={onSubmit}>
-            <input type="text" value={value} style={{color}}
+            <input type="text" name="input" value={value} style={{color}}
 				required pattern=".*\S+.*"
-                onChange={onChange} onKeyPress={onKeyPress}/>
+                onChange={onChange} />
 			<button className="create-button">추가</button>
         </form>
     )

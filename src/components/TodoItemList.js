@@ -8,11 +8,11 @@ class TodoItemList extends Component {
 
     }
     render() {
-        const { todos, onToggle, onRemove } = this.props;
+        const { todos, onToggle, onRemove, onChange, onEditSubmit } = this.props;
 
 
         const todoList = todos.map(
-            ({id, color, text, checked}) => (
+            ({id, color, text, checked, editing}) => (
                 <TodoItem
                     id={id}
                     text={text}
@@ -21,6 +21,9 @@ class TodoItemList extends Component {
                     onRemove={onRemove}
                     color={color}
                     key={id}
+					onChange={onChange}
+					editing={editing}
+					onEditSubmit={onEditSubmit}
                     />
             )
         )
