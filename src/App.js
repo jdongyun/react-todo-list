@@ -25,17 +25,18 @@ class App extends Component {
     })
   }
 
-  handleCreate = () => {
+  handleSubmit = (e) => {
     const { input, todos, color_selected } = this.state;
-    this.setState({
-      input: '',
-      todos: todos.concat({
-        id: this.id++,
-        text: input,
-        checked: false,
-        color: color_selected
-      })
-    })
+	this.setState({
+		input: '',
+		todos: todos.concat({
+			id: this.id++,
+			text: input,
+			checked: false,
+			color: color_selected
+		})
+	});
+	e.preventDefault();
   }
 
   handleKeyPress = (e) => {
@@ -75,7 +76,7 @@ class App extends Component {
     const { input, todos, colors, color_selected } = this.state;
     const {
       handleChange,
-      handleCreate,
+      handleSubmit,
       handleKeyPress,
       handleToggle,
       handleRemove,
@@ -93,7 +94,7 @@ class App extends Component {
           value={input}
           onKeyPress={handleKeyPress}
           onChange={handleChange}
-          onCreate={handleCreate}
+          onSubmit={handleSubmit}
           color={color_selected}
         />
       )}>

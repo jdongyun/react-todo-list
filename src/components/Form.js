@@ -1,15 +1,14 @@
 import React from 'react'
 import './Form.css'
 
-const Form = ({value, color, onChange, onCreate, onKeyPress}) => {
+const Form = ({value, color, onChange, onSubmit, onKeyPress}) => {
     return (
-        <div className="form">
-            <input value={value} style={{color}}
+        <form className="form" onSubmit={onSubmit}>
+            <input type="text" value={value} style={{color}}
+				required pattern=".*\S+.*"
                 onChange={onChange} onKeyPress={onKeyPress}/>
-            <div className="create-button" onClick={onCreate}>
-                추가
-            </div>
-        </div>
+			<button className="create-button">추가</button>
+        </form>
     )
 }
 
