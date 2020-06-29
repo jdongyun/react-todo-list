@@ -1,15 +1,21 @@
-import React from 'react'
-import './Form.css'
+import React from 'react';
+import './Form.css';
 
-const Form = ({value, color, onChange, onSubmit}) => {
-    return (
-        <form className="form" onSubmit={onSubmit}>
-            <input type="text" name="input" value={value} style={{color}}
-				required pattern=".*\S+.*"
-                onChange={onChange} />
+const Form = ({ value, color, onChange, onSubmit }) => {
+	return (
+		<form className="form" onSubmit={onSubmit}>
+			<input
+				type="text"
+				name="input"
+				value={value}
+				style={{ color }}
+				required
+				pattern=".*\S+.*"
+				onChange={onChange}
+			/>
 			<button className="create-button">추가</button>
-        </form>
-    )
-}
+		</form>
+	);
+};
 
-export default Form
+export default Form;
