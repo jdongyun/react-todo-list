@@ -1,31 +1,31 @@
 .form {
-    display: flex;
+	display: flex;
 }
 
 .form input {
-    flex: 1;
-    font-size: 1.25rem;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #c5f6fa;
-    font-weight: 100;
+	flex: 1;
+	font-size: 1.25rem;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #c5f6fa;
+	font-weight: 300;
 }
 
-.create-button {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 1rem;
-    background: #22b8cf;
+.form button {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: 1rem;
+	background: #22b8cf;
 	border: none;
-    border-radius: 3px;
-    color: white;
+	border-radius: 3px;
+	color: white;
 	font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .create-button:hover {
-    background: #3bc9db;
-  }
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.form button:hover {
+	background: #3bc9db;
+}
